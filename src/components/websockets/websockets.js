@@ -1,28 +1,13 @@
 import { useContext, useEffect, useState } from 'react';
 import { WSContext as WSContextProvider } from '../../App';
 
-const WSCommunication = ({ WSConnection, WSConnectionEstablished }) => {
+const WSCommunication = () => {
   const WSContext = useContext(WSContextProvider);
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    console.log('WS Messages: ', WSContext.WSMessages);
-
-    // if (WSContext.WSConnectionEstablished === true) {
-    //   console.log('On mount send message.');
-    //   WSContext.WSConnection.send("Here's some text that the server is urgently awaiting!");
-    // }
-
-    return () => {
-      console.log('WSCommunication => Unmounted');
-    };
-
-    console.log(WSContext.WSMessages);
-  }, [WSContext]);
-
-  useEffect(() => {
-    console.log('input = ', input);
-  }, [input]);
+    console.log('WSCommunication => Unmounted');
+  }, []);
 
   return (
     <>

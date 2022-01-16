@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from 'react';
-import './App.css';
 import Navigation from './components/navigation/navigation';
 import Router from './components/router/router';
+import './App.css';
 
 const WSConnection = new WebSocket('ws://localhost:4001');
 export const WSContext = createContext({
@@ -39,7 +39,7 @@ function App() {
         }}
       >
         <Navigation />
-        <Router WSConnection={WSConnection} WSConnectionEstablished={WSConnectionEstablished} />
+        <Router />
       </WSContext.Provider>
     </div>
   );

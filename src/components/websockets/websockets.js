@@ -6,7 +6,9 @@ const WSCommunication = () => {
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    console.log('WSCommunication => Unmounted');
+    return () => {
+      console.log('WSCommunication => Unmounted');
+    };
   }, []);
 
   return (

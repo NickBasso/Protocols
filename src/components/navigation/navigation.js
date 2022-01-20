@@ -7,6 +7,8 @@ const Navigation = () => (
     <Link to="/https">HTTPS</Link>
     <br />
     <Link to="/ws">WS</Link>
+    <br />
+    <Link to="/webrtc">WebRTC</Link>
   </>
 );
 
